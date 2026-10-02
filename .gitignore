@@ -1,0 +1,32 @@
+# ---- 系统垃圾 ----
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- 依赖与构建产物（本仓库其实不需要）----
+node_modules/
+dist/
+build/
+.cache/
+
+# ---- 日志（tools/dl-fonts.mjs 会把抓取日志写进 assets/fonts/_log.txt）----
+*.log
+_log.txt
+npm-debug.log*
+yarn-error.log*
+
+# ---- 临时文件 ----
+*.tmp
+*.bak
+*.orig

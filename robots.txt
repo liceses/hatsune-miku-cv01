@@ -1,0 +1,8 @@
+# 初音ミク / HATSUNE MIKU — CV01 介绍页
+# https://liceses.github.io/hatsune-miku-cv01/
+# 纯静态粉丝页，全部内容欢迎抓取与转载（立绘版权见页面页脚）。
+
+User-agent: *
+Allow: /
+
+Sitemap: https://liceses.github.io/hatsune-miku-cv01/sitemap.xml
