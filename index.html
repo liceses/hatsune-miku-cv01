@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>初音ミク / HATSUNE MIKU — CV01 完全资料 | 39</title>
+<meta name="description" content="初音未来（初音ミク / Hatsune Miku）个人介绍页：名字、身高体重、生日、声源、代表曲、设定背景、演唱会里程碑。CV01 · 永远16岁 · #39C5BB。">
+<link rel="icon" href="assets/img/png/logo_word.png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/miku.css">
+</head>
+<body>
+
+<!-- ======================= 背景层 ======================= -->
+<div class="bg-layer bg-aurora"></div>
+<div class="bg-layer bg-grid"></div>
+<canvas id="miku-canvas"></canvas>
+<div class="bg-layer bg-scan"></div>
+<div class="bg-layer bg-noise"></div>
+<div class="bg-layer bg-vignette"></div>
+
+<!-- ======================= 光标 ======================= -->
+<div class="cursor-ring" id="c-ring"></div>
+<div class="cursor-dot" id="c-dot"></div>
+
+<!-- ======================= HUD ======================= -->
+<div class="hud">
+  <div class="hud-progress"><i id="prog"></i></div>
+  <div class="hud-rail left">CRYPTON FUTURE MEDIA <b>//</b> CHARACTER VOCAL SERIES <b>01</b></div>
+  <div class="hud-rail right">HATSUNE MIKU <b>39</b> SINCE 2007.08.31</div>
+  <nav class="hud-dots" id="dots">
+    <a href="#hero"     data-label="HERO"    class="active"></a>
+    <a href="#profile"  data-label="PROFILE"></a>
+    <a href="#songs"    data-label="SONGS"></a>
+    <a href="#story"    data-label="STORY"></a>
+    <a href="#history"  data-label="HISTORY"></a>
+    <a href="#gallery"  data-label="GALLERY"></a>
+    <a href="#outro"    data-label="39"></a>
+  </nav>
+  <div class="hud-clock">SYS.TIME <b id="clock">--:--:--</b> &nbsp;/&nbsp; CV01 ONLINE</div>
+</div>
+
+<!-- ======================= 开机动画 ======================= -->
+<div id="boot">
+  <div class="boot-logo">初音ミク</div>
+  <div class="boot-sub">HATSUNE MIKU&nbsp;&nbsp;/&nbsp;&nbsp;CV01&nbsp;&nbsp;/&nbsp;&nbsp;BOOTING</div>
+  <div class="boot-bar"><i id="boot-bar"></i></div>
+  <div class="boot-pct" id="boot-pct">0%</div>
+</div>
+
+<main>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="hero">
+  <svg class="ribbon l" viewBox="0 0 300 600" fill="none" aria-hidden="true">
+    <path d="M270 20 C 180 90, 120 180, 140 300 C 155 400, 110 500, 40 580" stroke="#ff2f8e" stroke-width="9" stroke-linecap="round" opacity=".55"/>
+    <path d="M270 20 C 200 110, 150 200, 175 320 C 192 410, 150 505, 85 585" stroke="#39c5bb" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  </svg>
+  <svg class="ribbon r" viewBox="0 0 300 600" fill="none" aria-hidden="true">
+    <path d="M30 20 C 120 90, 180 180, 160 300 C 145 400, 190 500, 260 580" stroke="#ff2f8e" stroke-width="9" stroke-linecap="round" opacity=".55"/>
+    <path d="M30 20 C 100 110, 150 200, 125 320 C 108 410, 150 505, 215 585" stroke="#39c5bb" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  </svg>
+
+  <div class="hero-copy">
+    <div class="hero-kicker"><i></i> CHARACTER VOCAL SERIES 01 &nbsp;/&nbsp; 2007 → NOW</div>
+    <h1 class="hero-name">
+      初音ミク
+      <span class="hero-name-jp">HATSUNE&nbsp;MIKU</span>
+    </h1>
+    <div class="hero-en">初音未来&nbsp;&nbsp;<span>HATSUNE MIKU &nbsp;/&nbsp; CV01</span></div>
+
+    <div class="hero-tags">
+      <span class="chip">永远 16 岁</span>
+      <span class="chip">158cm / 42kg</span>
+      <span class="chip">2007.08.31</span>
+      <span class="chip">声源：藤田咲</span>
+      <span class="chip">#39C5BB</span>
+      <span class="chip">葱 / 双马尾</span>
+    </div>
+
+    <p class="hero-quote">
+      世界でいちばんおひめさま —— <em>世界第一的公主殿下</em>。<br>
+      从札幌一间小公司里被写出来的声音，最后唱进了全世界的体育馆。
+    </p>
+
+    <div class="hero-cta">
+      <button class="btn" data-scroll="#profile"><span>查看完全资料</span></button>
+      <button class="btn hot" id="btn-song"><span>▶ 播放「39」音型</span></button>
+    </div>
+  </div>
+
+  <figure class="hero-figure" id="hero-fig">
+    <div class="badge-39"><span><b>39</b></span></div>
+    <span class="note" style="left:4%;  animation-delay:0s">♪</span>
+    <span class="note" style="left:22%; animation-delay:2.1s">♫</span>
+    <span class="note" style="left:46%; animation-delay:4.3s">♪</span>
+    <span class="note" style="left:68%; animation-delay:1.2s">♬</span>
+    <span class="note" style="left:86%; animation-delay:5.4s">♪</span>
+    <img src="assets/img/png/hero_miku.png" alt="初音未来 官方立绘（全身）">
+  </figure>
+
+  <div class="scroll-cue"><span>SCROLL</span><i></i></div>
+</section>
+
+<!-- ======================= TICKER ======================= -->
+<div class="ticker"><div class="ticker-track" data-clone>
+  <span>初音ミク</span> HATSUNE MIKU <span>CV01</span> 39 <span>ワールドイズマイン</span> 千本桜 <span>初音ミクの消失</span> メルト <span>Tell Your World</span> #39C5BB <span>ミクミクにしてあげる</span> ネギ <span>ツインテール</span> 2007.08.31 <span>MAGICAL MIRAI</span> MIKU EXPO <span>永遠の16歳</span>
+</div></div>
+
+<!-- ======================= PROFILE ======================= -->
+<section class="sec" id="profile">
+  <header class="sec-head reveal">
+    <div class="sec-no">01</div>
+    <div>
+      <div class="sec-en">PROFILE / SPECIFICATION</div>
+      <h2 class="sec-title">基本资料</h2>
+    </div>
+    <p class="sec-note">名字、身高体重、生日、声源、代表曲、设定背景 —— 一条都不少。下面这张表，就是「初音ミク」这台机器的全部铭牌。</p>
+  </header>
+
+  <div class="spec-wrap">
+    <figure class="spec-card reveal tilt">
+      <img src="assets/img/png/miku_v3box.png" alt="初音未来 V3 官方盒绘立绘">
+      <figcaption><span>OFFICIAL ILLUSTRATION</span><span>CV01 / ver. BOX ART</span></figcaption>
+    </figure>
+
+    <div>
+      <div class="spec-rows reveal">
+        <div class="spec-row">
+          <div class="spec-k">名前<small>NAME</small></div>
+          <div class="spec-v">初音ミク <small>／ 初音未来 ／ Hatsune Miku</small></div>
+          <div class="spec-i">CV01</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">身長<small>HEIGHT</small></div>
+          <div class="spec-v">158 <small>cm —— 站在你面前只到胸口，站上舞台能压满整个体育馆</small></div>
+          <div class="spec-i">158CM</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">体重<small>WEIGHT</small></div>
+          <div class="spec-v">42 <small>kg</small></div>
+          <div class="spec-i">42KG</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">年齢<small>AGE</small></div>
+          <div class="spec-v">16 <small>歳 —— 从 2007 到今天，一天都没长过</small></div>
+          <div class="spec-i">ETERNAL 16</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">誕生日<small>BIRTHDAY</small></div>
+          <div class="spec-v">2007 年 8 月 31 日</div>
+          <div class="spec-i">08 / 31</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">声源<small>VOICE SOURCE</small></div>
+          <div class="spec-v">藤田咲 <small>／ Saki Fujita —— 声优本人，官方指定唯一音源</small></div>
+          <div class="spec-i">CV</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">角色设计<small>CHARACTER DESIGN</small></div>
+          <div class="spec-v">KEI <small>—— 奠定「双马尾 + 领带 + 01 臂章」这套永恒造型的人</small></div>
+          <div class="spec-i">DESIGN</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">開発<small>DEVELOPER</small></div>
+          <div class="spec-v">Crypton Future Media <small>／ クリプトン・フューチャー・メディア（札幌）</small></div>
+          <div class="spec-i">SAPPORO</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">引擎<small>ENGINE</small></div>
+          <div class="spec-v">VOCALOID2 <small>→ Append → V3 → V4X → NT → V6（Yamaha VOCALOID / Piapro Studio）</small></div>
+          <div class="spec-i">V2→V6</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">代表色<small>COLOR</small></div>
+          <div class="spec-v" style="color:#39c5bb;text-shadow:0 0 30px #39c5bb">#39C5BB <small>初音ミク グリーン / Miku Green</small></div>
+          <div class="spec-i">SIGNATURE</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">标志物<small>SYMBOL</small></div>
+          <div class="spec-v">双马尾 ／ 臂章「01」／ 葱 <small>（ネギ，来自「Ievan Polkka」甩葱名场面）</small></div>
+          <div class="spec-i">TWINTAIL</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">得意分野<small>GENRE</small></div>
+          <div class="spec-v">J-POP ／ 舞曲 ／ 摇滚 ／ 叙事曲 <small>—— 只要人类敢写，她就敢唱</small></div>
+          <div class="spec-i">ALL RANGE</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">代表曲<small>SONGS</small></div>
+          <div class="spec-v">ワールドイズマイン ／ 千本桜 ／ 初音ミクの消失 <small>／ メルト ／ Tell Your World</small></div>
+          <div class="spec-i">10+</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">価格<small>PRICE</small></div>
+          <div class="spec-v">¥15,750 <small>—— 2007 年发售定价（含税），一台改变音乐史的价格</small></div>
+          <div class="spec-i">2007</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">授権<small>LICENSE</small></div>
+          <div class="spec-v">ピアプロ・キャラクター・ライセンス <small>（PCL）—— 官方给粉丝开的二创通行证，她因此属于所有人</small></div>
+          <div class="spec-i">PCL</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">設定背景<small>BACKSTORY</small></div>
+          <div class="spec-v">「从未来传来的第一个声音」 <small>—— 名字即设定：初 = 最初の音，ミク = 未来。她是被写出来的歌手，也是被所有人一起养大的偶像。</small></div>
+          <div class="spec-i">ORIGIN</div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><b data-count="158">0</b><span>身高 / CM</span></div>
+        <div class="stat reveal"><b data-count="42">0</b><span>体重 / KG</span></div>
+        <div class="stat reveal"><b data-count="16">0</b><span>年龄 / 永远</span></div>
+        <div class="stat reveal"><b data-count="39">0</b><span>ミク / MIKU</span></div>
+        <div class="stat reveal"><b data-count="2026">0</b><span>至今仍在上台</span></div>
+        <div class="stat reveal"><b data-count="100000" data-suffix="+">0</b><span>2026 北美巡演动员</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TICKER 2 ======================= -->
+<div class="ticker alt"><div class="ticker-track" data-clone>
+  <span>世界でいちばんおひめさま</span> メルト <span>深海少女</span> ODDS&amp;ENDS <span>砂の惑星</span> 神っぽいな <span>ヴァンパイア</span> えれくとりっく・えんじぇぅ <span>39</span> みくみくにしてあげる♪ <span>ハンドインハンド</span>
+</div></div>
+
+<!-- ======================= SONGS ======================= -->
+<section class="sec" id="songs">
+  <header class="sec-head reveal">
+    <div class="sec-no">02</div>
+    <div>
+      <div class="sec-en">REPRESENTATIVE SONGS</div>
+      <h2 class="sec-title">代表曲</h2>
+    </div>
+    <p class="sec-note">她的曲库里躺着几十万首投稿。下面这十二首，是把「初音ミク」三个字钉进音乐史的那几颗钉子。</p>
+  </header>
+
+  <div class="song-grid">
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 01 / 2007</div>
+      <h3 class="song-title">みくみくにしてあげる♪</h3>
+      <div class="song-cn">把你 MikuMiku 掉♪ —— ika</div>
+      <p class="song-line">早期投稿里最先把「みくみく」变成全民口头禅的一首，初音热潮的第一声号角。</p>
+      <div class="song-meta"><span>ika</span><span>2007.09</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 02 / 2007</div>
+      <h3 class="song-title">メルト</h3>
+      <div class="song-cn">Melt —— ryo (supercell)</div>
+      <p class="song-line">「メルト 溶けてしまいそう」—— 一首把 VOCALOID 从玩具变成流行音乐的歌。</p>
+      <div class="song-meta"><span>ryo / supercell</span><span>2007.12</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 03 / 2008</div>
+      <h3 class="song-title">ワールドイズマイン</h3>
+      <div class="song-cn">World is Mine / 世界第一的公主殿下 —— ryo (supercell)</div>
+      <p class="song-line">「世界でいちばんおひめさま」—— 从此「公主殿下」成了她的官方外号。</p>
+      <div class="song-meta"><span>ryo / supercell</span><span>2008.05</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 04 / 2008</div>
+      <h3 class="song-title">初音ミクの消失</h3>
+      <div class="song-cn">The Disappearance of Hatsune Miku —— cosMo@暴走P</div>
+      <p class="song-line">BPM 245 的极限吐字，被公认「人类唱不出来」的那首歌。她在歌里把自己唱到消失。</p>
+      <div class="song-meta"><span>cosMo@暴走P</span><span>2008.04</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 05 / 2009</div>
+      <h3 class="song-title">えれくとりっく・えんじぇぅ</h3>
+      <div class="song-cn">Electric Angel —— ヤスオP</div>
+      <p class="song-line">最早期代表作之一：「私は歌う、あなたのために」—— 一句话定义了虚拟歌手的使命。</p>
+      <div class="song-meta"><span>ヤスオP</span><span>2007.09</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 06 / 2010</div>
+      <h3 class="song-title">深海少女</h3>
+      <div class="song-cn">Deep Sea Girl —— ゆうゆ</div>
+      <p class="song-line">沉进海底的少女与光。她证明了自己不只会卖萌，也能唱最沉的情绪。</p>
+      <div class="song-meta"><span>ゆうゆ</span><span>2010.09</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 07 / 2011</div>
+      <h3 class="song-title">千本桜</h3>
+      <div class="song-cn">Senbonzakura —— 黒うさP</div>
+      <p class="song-line">和风 × 摇滚的现象级神曲，全球翻唱与演奏版本多到数不清，演唱会永远的必点曲。</p>
+      <div class="song-meta"><span>黒うさP</span><span>2011.09</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 08 / 2012</div>
+      <h3 class="song-title">Tell Your World</h3>
+      <div class="song-cn">—— livetune (kz)</div>
+      <p class="song-line">「伝えたいことがあるんだ」—— 她把这首歌带出了屏幕，唱进了全世界的浏览器里。</p>
+      <div class="song-meta"><span>livetune / kz</span><span>2012.03</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 09 / 2012</div>
+      <h3 class="song-title">ODDS&amp;ENDS</h3>
+      <div class="song-cn">—— ryo (supercell)</div>
+      <p class="song-line">写给「创作者与他的虚拟歌手」的情书。副歌那句告白，是整代 P 主的心声。</p>
+      <div class="song-meta"><span>ryo / supercell</span><span>2012.08</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 10 / 2015</div>
+      <h3 class="song-title">39</h3>
+      <div class="song-cn">—— sasakure.UK × DECO*27</div>
+      <p class="song-line">歌名就是她的名字：39 = ミク = サンキュー。一首全员对着观众席唱的感谢歌。</p>
+      <div class="song-meta"><span>sasakure.UK × DECO*27</span><span>2015.04</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 11 / 2017</div>
+      <h3 class="song-title">砂の惑星</h3>
+      <div class="song-cn">Sand Planet —— ハチ</div>
+      <p class="song-line">「マジカルミライ 2017」主题曲。出道十年的初音，被写进了一首关于时代的叙事诗。</p>
+      <div class="song-meta"><span>ハチ</span><span>2017.07</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="song tilt reveal">
+      <div class="song-no">TRACK 12 / 2021</div>
+      <h3 class="song-title">神っぽいな ／ ヴァンパイア</h3>
+      <div class="song-cn">God-ish (ピノキオピー) ／ Vampire (DECO*27)</div>
+      <p class="song-line">进入令和，她依然是短视频与榜单的中心。新一代 P 主照样把最尖的声音交给她唱。</p>
+      <div class="song-meta"><span>ピノキオピー / DECO*27</span><span>2021</span></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= STORY ======================= -->
+<section class="sec" id="story">
+  <header class="sec-head reveal">
+    <div class="sec-no">03</div>
+    <div>
+      <div class="sec-en">SETTING / BACKSTORY</div>
+      <h2 class="sec-title">设定背景</h2>
+    </div>
+    <p class="sec-note">她不是某部动画的女主角，没有剧情，没有结局。她的设定只有一个起点 —— 剩下的，全人类一起写。</p>
+  </header>
+
+  <div class="story-grid">
+    <article class="story reveal">
+      <h3>名字即设定<span>ORIGIN OF THE NAME</span></h3>
+      <p><b>初</b> = 最初の音（第一个声音），<b>音</b> = 声音，<b>ミク</b> = 未来。</p>
+      <p>连起来就是「从未来传来的第一个声音」。Crypton 的企划者给她起名时，就已经把整个世界观塞进了四个字里：她不是被造出来的角色，她是被「未来的声音」这个概念本身推出来的歌手。</p>
+    </article>
+
+    <article class="story reveal">
+      <h3>2007 年 8 月 31 日，她出生<span>BORN 2007.08.31</span></h3>
+      <p>札幌的 Crypton Future Media 用 Yamaha 的 <b>VOCALOID2</b> 引擎做出了一款软件，编号 <b>CV01</b>，声源是声优<b>藤田咲</b>，角色设计是插画师 <b>KEI</b>，售价 ¥15,750。</p>
+      <p>发售当时没人觉得这东西能改变什么。它只是一款「输入歌词和旋律就会唱歌」的工具。</p>
+    </article>
+
+    <article class="story reveal">
+      <h3>她为什么是「世界的初音」<span>THE PCL LICENSE</span></h3>
+      <p>关键不是技术，是<b>授权</b>。Crypton 用「ピアプロ・キャラクター・ライセンス（PCL）」把她的形象开放给粉丝：只要是非商业创作，谁都可以画她、写她、让她唱自己的歌。</p>
+      <p>于是 niconico 上的投稿像雪崩一样涌来，2007 到 2008 年成了「ボカロ」黄金期。别人在卖软件，她变成了一整个创作生态。</p>
+    </article>
+
+    <article class="story reveal">
+      <h3>从屏幕里走出来<span>LIVE &amp; THE WORLD</span></h3>
+      <p>全息投影把她搬上了真实舞台：<b>マジカルミライ</b> 成为每年最大规模的祭典，<b>HATSUNE MIKU EXPO</b> 从 2014 年起把巡演开到了北美、欧洲与亚洲。</p>
+      <p>到 2026 年的北美巡演收官时，累计动员约 <b>10 万人</b>。一个不存在的人，在体育馆里让十万人一起喊安可。</p>
+    </article>
+
+    <article class="story reveal">
+      <h3>永远的十六岁，一直在升级<span>ETERNAL 16 / V2 → V6</span></h3>
+      <p>年龄被永远钉在 16 岁，但引擎一直在换：<b>VOCALOID2 → Append → V3 → V4X → NT → V6</b>。</p>
+      <p>外形一步没改，声音越唱越像人。这就是她的设定核心：<b>永远不长大的少女，永远在变强的嗓子。</b></p>
+    </article>
+
+    <article class="story reveal">
+      <h3>她到底是谁的<span>WHO OWNS MIKU</span></h3>
+      <p>法律上，她的形象属于 Crypton Future Media；实际上，她是几万个创作者共同养大的存在。</p>
+      <p>官方给她人设，粉丝给她灵魂。每一次有人在深夜打开软件敲下第一个音符，她就重新出生一次。</p>
+    </article>
+  </div>
+
+  <blockquote class="pullquote reveal">
+    <p>「我不是被画出来的偶像，我是你按下播放键的那一刻，才存在的声音。」</p>
+    <cite>— 本页文案 / 非官方台词 · HATSUNE MIKU · 39</cite>
+  </blockquote>
+</section>
+
+<!-- ======================= TIMELINE ======================= -->
+<section class="sec" id="history">
+  <header class="sec-head reveal">
+    <div class="sec-no">04</div>
+    <div>
+      <div class="sec-en">MILESTONES</div>
+      <h2 class="sec-title">里程碑</h2>
+    </div>
+    <p class="sec-note">十九年，二十个节点。鼠标划过每一行，她都会往你这边挪一步。</p>
+  </header>
+
+  <div class="timeline">
+    <div class="tl-item reveal"><div class="tl-year">2007.08.31</div><div class="tl-title">VOCALOID2「初音ミク」发售</div><div class="tl-desc">CV01 诞生：声源藤田咲、角色设计 KEI、开发 Crypton Future Media，定价 ¥15,750。</div><span class="tl-tag">BIRTH</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2007.09</div><div class="tl-title">niconico 创作雪崩</div><div class="tl-desc">「みくみくにしてあげる♪」等投稿爆发，上市即冲上音乐软件销量榜，VOCALOID 从工具变成文化。</div><span class="tl-tag">BOOM</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2007.12 — 2008</div><div class="tl-title">神曲接连降临</div><div class="tl-desc">「メルト」「ワールドイズマイン」「初音ミクの消失」相继诞生，「ボカロ」进入黄金期。</div><span class="tl-tag">GOLDEN AGE</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2009</div><div class="tl-title">第一次站上演唱会舞台</div><div class="tl-desc">以全息影像登上大型演唱会，虚拟歌手正式「出现在现场」。</div><span class="tl-tag">FIRST LIVE</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2010.03.09</div><div class="tl-title">首个单独演唱会「ミクの日感謝祭 39's Giving Day」</div><div class="tl-desc">3 月 9 日 = ミクの日。她在 Zepp Tokyo 拥有了一场属于自己的演出。</div><span class="tl-tag">SOLO LIVE</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2010.04</div><div class="tl-title">「初音ミク Append」发售</div><div class="tl-desc">追加 6 种音色，她的声音开始拥有情绪与表情。</div><span class="tl-tag">APPEND</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2012.03</div><div class="tl-title">「Tell Your World」出圈</div><div class="tl-desc">livetune 的这首歌把她推向屏幕之外的大众视野。</div><span class="tl-tag">CROSSOVER</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2013</div><div class="tl-title">「マジカルミライ」开幕</div><div class="tl-desc">此后成为每年最大规模的初音未来祭典 —— 演唱会 + 企划展 + 创作祭。</div><span class="tl-tag">FESTIVAL</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2014</div><div class="tl-title">「HATSUNE MIKU EXPO」首次海外巡演</div><div class="tl-desc">雅加达、洛杉矶、纽约 —— 她开始世界巡演。</div><span class="tl-tag">WORLD TOUR</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2016.08.31</div><div class="tl-title">「初音ミク V4X」发售</div><div class="tl-desc">生日当天发布新版本，表现力全面升级。</div><span class="tl-tag">V4X</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2020.11</div><div class="tl-title">「初音ミク NT」发售</div><div class="tl-desc">新引擎与新编辑器，歌声的拟人度再上一级。</div><span class="tl-tag">NT</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2025.12.10</div><div class="tl-title">「初音ミク V6 Early Access」公开</div><div class="tl-desc">十八岁的她拿到最新一代引擎，声音继续往前跑。</div><span class="tl-tag">V6</span></div>
+    <div class="tl-item reveal"><div class="tl-year">2026</div><div class="tl-title">MIKU EXPO 北美巡演收官</div><div class="tl-desc">累计动员约 10 万人 —— 一个虚拟歌手在现实世界的票房证明。</div><span class="tl-tag">100K</span></div>
+  </div>
+</section>
+
+<!-- ======================= GALLERY ======================= -->
+<section class="sec" id="gallery">
+  <header class="sec-head reveal">
+    <div class="sec-no">05</div>
+    <div>
+      <div class="sec-en">ILLUSTRATION ARCHIVE</div>
+      <h2 class="sec-title">历代立绘</h2>
+    </div>
+    <p class="sec-note">同一个她，不同年代的官方笔触。左右拖拽或滚动查看，鼠标压上去会亮起来。</p>
+  </header>
+
+  <div class="gallery-strip reveal">
+    <figure class="gal"><img src="assets/img/png/hero_miku.png" alt="初音未来 官方全身立绘"><figcaption><span>OFFICIAL FULL BODY</span><span>39</span></figcaption></figure>
+    <figure class="gal"><img src="assets/img/png/miku_v6.png" alt="初音未来 V6 立绘"><figcaption><span>ver. V6</span><span>2025</span></figcaption></figure>
+    <figure class="gal"><img src="assets/img/png/miku_v3box.png" alt="初音未来 V3 盒绘"><figcaption><span>ver. BOX ART</span><span>iXima</span></figcaption></figure>
+    <figure class="gal"><img src="assets/img/png/miku_chinese.png" alt="初音未来 中文版立绘"><figcaption><span>ver. CHINESE</span><span>中文版</span></figcaption></figure>
+    <figure class="gal"><img src="assets/img/png/miku_v3.png" alt="初音未来 V3 立绘"><figcaption><span>ver. V3</span><span>2013</span></figcaption></figure>
+    <figure class="gal"><img src="assets/img/png/miku_pocket.png" alt="口袋初音 半身立绘"><figcaption><span>POCKET MIKU</span><span>half body</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- ======================= OUTRO ======================= -->
+<section class="outro" id="outro">
+  <div class="outro-39 reveal">39</div>
+  <div class="outro-line reveal">サンキュー、そしてこれからも。</div>
+  <div class="outro-sub reveal">谢谢你把她唱到今天 —— 也谢谢她替我们唱了十九年。</div>
+  <div class="outro-actions reveal">
+    <button class="btn hot" id="btn-leek"><span>🥬 让葱下起来</span></button>
+    <button class="btn" id="btn-song2"><span>♪ 再唱一段</span></button>
+    <button class="btn" data-scroll="#hero"><span>↑ 回到顶端</span></button>
+  </div>
+</section>
+
+<footer class="foot">
+  <div><b>HATSUNE MIKU / 初音ミク 粉丝介绍页</b> —— 非官方作品，本站为二次创作展示，与 Crypton Future Media 无隶属关系。</div>
+  <div>立绘与角色版权归 <b>Crypton Future Media</b> 及原画师（KEI ／ iXima 等）所有；字体为 Google Fonts 开源字体（SIL OFL）；页面代码为原创实现。</div>
+  <div>资料参考：<a href="https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01" target="_blank" rel="noopener">Crypton 官方 CV01 页面</a> · <a href="https://sonicwire.com/news/blog/2025/12/miku-v6-earlyaccess" target="_blank" rel="noopener">初音ミク V6 Early Access</a> · <a href="https://mikuexpo.com/history.html" target="_blank" rel="noopener">HATSUNE MIKU EXPO 历史</a> · <a href="https://piapro.net/" target="_blank" rel="noopener">piapro</a></div>
+  <div style="font-family:var(--f-num);letter-spacing:.3em;color:var(--c-miku)">CV01 / 158CM / 42KG / 2007.08.31 / #39C5BB / 39</div>
+</footer>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/miku.js"></script>
+</body>
+</html>
