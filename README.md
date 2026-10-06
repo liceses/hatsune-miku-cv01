@@ -1,41 +1,85 @@
+# 初音ミク / HATSUNE MIKU — CV01 介绍页
+
+> **English**: A zero-build fan page for Hatsune Miku (CV01) — profile, twelve signature songs, backstory, milestones and six official illustrations, all in one static HTML file.
+
 <p align="center">
   <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-39C5BB?style=flat-square&amp;labelColor=0b2429&amp;logo=opensourceinitiative&amp;logoColor=ffffff">
   <img alt="GitHub Pages live" src="https://img.shields.io/badge/GitHub_Pages-live-FF2F8E?style=flat-square&amp;labelColor=0b2429&amp;logo=githubpages&amp;logoColor=ffffff">
-  <img alt="纯前端 零依赖" src="https://img.shields.io/badge/%E7%BA%AF%E5%89%8D%E7%AB%AF-%E9%9B%B6%E4%BE%9D%E8%B5%96-39C5BB?style=flat-square&amp;labelColor=0b2429">
-  <img alt="Made with 💪" src="https://img.shields.io/badge/Made_with-%F0%9F%92%AA-FF2F8E?style=flat-square&amp;labelColor=0b2429">
-  <img alt="Stars" src="https://img.shields.io/github/stars/liceses/hatsune-miku-cv01?style=flat-square&amp;label=Stars&amp;color=f7f56a&amp;labelColor=0b2429">
+  <img alt="纯前端 零依赖 零构建" src="https://img.shields.io/badge/%E7%BA%AF%E5%89%8D%E7%AB%AF-%E9%9B%B6%E4%BE%9D%E8%B5%96_%E9%9B%B6%E6%9E%84%E5%BB%BA-39C5BB?style=flat-square&amp;labelColor=0b2429">
+  <img alt="离线可用 0 外部请求" src="https://img.shields.io/badge/%E7%A6%BB%E7%BA%BF-%E5%8F%AF%E7%94%A8_0_%E5%A4%96%E9%83%A8%E8%AF%B7%E6%B1%82-a8fff4?style=flat-square&amp;labelColor=0b2429">
 </p>
 <p align="center">
   <img alt="HTML5 单文件 479 行" src="https://img.shields.io/badge/HTML5-%E5%8D%95%E6%96%87%E4%BB%B6_479_%E8%A1%8C-E34F26?style=flat-square&amp;labelColor=0b2429&amp;logo=html5&amp;logoColor=ffffff">
   <img alt="CSS3 1261 行 零框架" src="https://img.shields.io/badge/CSS3-1261_%E8%A1%8C_%E9%9B%B6%E6%A1%86%E6%9E%B6-1572B6?style=flat-square&amp;labelColor=0b2429&amp;logo=css3&amp;logoColor=ffffff">
-  <img alt="JavaScript 原生 ES2020" src="https://img.shields.io/badge/JavaScript-%E5%8E%9F%E7%94%9F_ES2020-F7DF1E?style=flat-square&amp;labelColor=0b2429&amp;logo=javascript&amp;logoColor=000000">
+  <img alt="JavaScript 原生 ES2020 429 行" src="https://img.shields.io/badge/JavaScript-%E5%8E%9F%E7%94%9F_ES2020_429_%E8%A1%8C-F7DF1E?style=flat-square&amp;labelColor=0b2429&amp;logo=javascript&amp;logoColor=000000">
   <img alt="字体 479 个 woff2 自托管" src="https://img.shields.io/badge/%E5%AD%97%E4%BD%93-479_%E4%B8%AA_woff2_%E8%87%AA%E6%89%98%E7%AE%A1-39C5BB?style=flat-square&amp;labelColor=0b2429&amp;logo=googlefonts&amp;logoColor=ffffff">
-  <img alt="离线可用" src="https://img.shields.io/badge/%E7%A6%BB%E7%BA%BF-%E5%8F%AF%E7%94%A8-a8fff4?style=flat-square&amp;labelColor=0b2429">
 </p>
-
-<h1 align="center">初音ミク / HATSUNE MIKU — CV01 介绍页</h1>
 
 <p align="center">
   <b>▶ 线上地址：<a href="https://liceses.github.io/hatsune-miku-cv01/">https://liceses.github.io/hatsune-miku-cv01/</a></b>
 </p>
 
-> 一页 479 行 HTML 撑起来的初音未来完全资料页。
-> **零框架、零构建、零 CDN、零外部请求** —— 拔掉网线双击 `index.html`，她照样开唱。
+她不是某部动画的女主角：没有剧情、没有结局，设定只有一个起点 —— 剩下的，全人类一起写。
+这一页把散在几十个页面里的资料（铭牌 / 代表曲 / 设定背景 / 演唱会里程碑 / 历代立绘）
+压成**一个文件**，让第一次点进来的人在 30 秒内认识她，也让想改的人只需要打开一个 HTML。
+
+**零框架、零构建、零 CDN、零外部请求** —— 拔掉网线双击 `index.html`，她照样开唱。
 
 ![HERO — 初音ミク 首屏](preview/hero.png)
+*图 · 首屏实拍：巨型「初音ミク」标题 + 6 枚属性 chip + 全身立绘 + 自转 `39` 徽章，外层是 HUD（顶部进度条 / 两侧竖排 rail / 右侧 7 个导航点 / 系统实时时钟）。*
 
 ---
 
-## 一眼看懂
+<a id="quickstart"></a>
+## 🥬 快速开始
+
+**前置条件：没有。** 不需要 Node、不需要 `npm install`、不需要构建步骤、不需要填任何 Key。
+
+```bash
+# 方式 A · 任何有 Python 的机器（本次实跑过：首页与 fonts.css 都返回 200）
+python -m http.server 8899      # 在仓库根目录执行 → 打开 http://127.0.0.1:8899/
+
+# 方式 B · Windows 一键（双击，不用敲命令）
+#   打开页面.cmd —— 自己去找 node → 起 tools/serve.mjs → 开浏览器；找不到 node 就退化成直接开 index.html
+```
+
+**你会看到**：先是开机动画（`0% → 100%` 进度条 + 伪终端文案），结束后右下角 toast 一句
+「CV01 上线 —— 39 / 初音ミク」，然后落进首屏。往下滚，七个 section 一路推到底，中间夹两条无缝跑马灯。
+
+> `打开页面.cmd` 和 `node tools/serve.mjs` 里有一个**写死的绝对路径**问题，换机器会 404 ——
+> 见 [已知限制与坑](#limits) 第 2 条。不想读那一节就用方式 A。
+
+---
+
+<a id="toc"></a>
+## 📖 目录
+
+| 想了解 | 看这里 |
+| --- | --- |
+| 一屏看完所有硬事实 | [一眼看懂](#facts) |
+| 页面上到底有什么 | [页面里有什么](#sections) |
+| 它是怎么动起来的 | [她是怎么动起来的](#how) |
+| 每个交互怎么实现的 | [交互清单](#interactions) |
+| 长什么样 | [页面实拍](#shots) |
+| 文件都放在哪 | [目录结构](#tree) |
+| 怎么部署 / 自建一份 | [部署 / 自建一份](#deploy) |
+| 有什么坑 | [已知限制与坑](#limits) |
+| 立绘和字体能商用吗 | [素材与版权](#credits) |
+| 代码什么许可 | [许可与致谢](#license) |
+
+---
+
+<a id="facts"></a>
+## ✨ 一眼看懂
 
 | 项 | 事实 |
 | --- | --- |
-| 页面本体 | `index.html` · **479 行 / 28.7 KB** —— 结构、文案、SEO meta 全在这一个文件里 |
-| 样式 | `assets/css/miku.css` · **1261 行 / 34.5 KB** —— 手写 CSS，**21 个 `@keyframes`**、4 个 `@media` 块 |
-| 交互 | `assets/js/miku.js` · **429 行 / 15.9 KB** —— 原生 ES2020，单个 IIFE，**无任何依赖** |
-| 字体 | `assets/fonts/` · **479 个 woff2** 子集 + `fonts.css`（**582 条 `@font-face`**），5 个字族，全部本地文件、全部存在 |
+| 页面本体 | `index.html` · **479 行 / 29.2 KB** —— 结构、文案、SEO meta 全在这一个文件里 |
+| 样式 | `assets/css/miku.css` · **1261 行 / 35.7 KB** —— 手写 CSS，23 个自定义属性、**21 个 `@keyframes`**、4 个 `@media` 块 |
+| 交互 | `assets/js/miku.js` · **429 行 / 16.3 KB** —— 原生 ES2020，单个 IIFE，**0 个 `import` / `require`** |
+| 字体 | `assets/fonts/` · **479 个 woff2** 子集 + `fonts.css`（**582 条 `@font-face`**），5 个字族，全部本地文件 |
 | 立绘 | `assets/img/png/` · **7 张**官方透明 PNG（6 张立绘 + 1 张字标），单张最大 1.13 MB |
-| 截图 | `preview/` · **5 张**页面实拍（480 KB ~ 833 KB） |
+| 截图 | `preview/` · **6 张**页面实拍（约 347 KB ~ 814 KB，含 1 张 430px 窄屏） |
 | 外部请求 | **0**。没有 CDN、没有 Google Fonts 外链、没有统计脚本、没有 iframe；`index.html` 里唯一的 `https` 出现在页脚 4 条「资料来源」`<a href>` 上，点了才请求 |
 | 仓库体积 | 约 **17.1 MB**，几乎全是字体与立绘 |
 | 构建步骤 | **无**。没有 `package.json`，没有 `node_modules`，改完刷新浏览器就是最新版 |
@@ -43,9 +87,12 @@
 | 无障碍 | 跟随系统 `prefers-reduced-motion`，动画时长压到 0.001s，tilt / 视差 / 残影全部停摆 |
 | 主色 | 初音ミク グリーン `#39C5BB`，点缀粉 `#FF2F8E` |
 
+> 体积一律按 **1 KB = 1024 B** 计。
+
 ---
 
-## 页面里有什么
+<a id="sections"></a>
+## 🎤 页面里有什么
 
 七个 section 一路推到底，中间夹两条无缝跑马灯：
 
@@ -65,7 +112,25 @@
 
 ---
 
-## 交互清单（全部手写，无库）
+<a id="how"></a>
+## 🔧 她是怎么动起来的
+
+一句话原理：**没有动画库，也没有请求外部资源 —— 页面把「动」拆成三条互相不干扰的线，各自用浏览器最原生的能力实现。**
+
+| 线 | 做法 | 关键点 |
+| --- | --- | --- |
+| 背景 | 5 个纯 CSS 层（极光 `bg-aurora` / 网格 `bg-grid` / 扫描线 `bg-scan` / 噪点 `bg-noise` / 暗角 `bg-vignette`）叠在 1 个全屏 `<canvas>` 上 | 层次感靠叠加与混合，不靠图片 |
+| 循环 | 常驻 3 条 `requestAnimationFrame`：自定义光标缓动（0.16）、canvas 粒子场、HERO 立绘视差（0.07） | 粒子场在 `visibilitychange` 隐藏时**停掉**，不在后台空转；`.tilt` 是每个元素按需启停的第 4 条（0.18） |
+| 滚动 | 3 个 `IntersectionObserver` 各管一件事：区块揭示（阈值 0.12）、数字滚动计数（0.4）、英文小标题乱码解码（0.6） | 一次性 `unobserve`，滚过去就不再观察 |
+| 声音 | WebAudio **现场合成**：10 音方波主旋律 + 3 段三角波贝斯 + 26 颗正弦星点，经低通滤波 2600 → 900 Hz | **不加载任何音频文件** |
+| 跑马灯 | JS 只把轨道内容复制一份（`data-clone`），位移交给 CSS `tickerRun` 关键帧 | 无缝循环不需要 JS 逐帧算 |
+
+所以整个「引擎」就是：**1 个 IIFE + 1 个 canvas + 3 个观察者 + 3 条 rAF**，没有一行依赖。
+
+---
+
+<a id="interactions"></a>
+## 🖱️ 交互清单（全部手写，无库）
 
 | 触发 | 表现 | 实现要点 |
 | --- | --- | --- |
@@ -85,7 +150,10 @@
 
 ---
 
-## 页面实拍
+<a id="shots"></a>
+## 📸 页面实拍
+
+首屏见本文顶部 `preview/hero.png`。剩下几屏：
 
 | <img src="preview/profile.png" width="460" alt="01 PROFILE"> | <img src="preview/songs.png" width="460" alt="02 SONGS"> |
 | :--: | :--: |
@@ -93,11 +161,19 @@
 | <img src="preview/history.png" width="460" alt="04 HISTORY"> | <img src="preview/gallery.png" width="460" alt="05 GALLERY"> |
 | **04 HISTORY** — 13 个里程碑：2007 → 2026 | **05 GALLERY** — 6 张历代立绘，可抓拽横滑 |
 
-首屏实拍见顶部 `preview/hero.png`；`preview/` 目录里就是这 5 张。
+窄屏（`430px`，对应 `@media (max-width: 640px)` 那一档）：
+
+| ![430px 窄屏实拍](preview/mobile.png) |
+| :--: |
+| **430px 窄屏实拍** — 右侧导航点隐藏、铭牌收成两列、粒子降到 46、立绘压到首屏下半 |
+
+> `preview/` 里的 6 张都是**真实页面截图**，不是示意图：`mobile.png` 是本次新增
+> （Edge 无头 + 本地 `python -m http.server`），其余 5 张是仓库原有的整窗口实拍。
 
 ---
 
-## 目录结构
+<a id="tree"></a>
+## 🗂️ 目录结构
 
 ```
 hatsune-miku-cv01/                    ← 仓库根目录 = 站点根目录
@@ -126,36 +202,17 @@ hatsune-miku-cv01/                    ← 仓库根目录 = 站点根目录
 │     └─ png/                         7 张官方透明 PNG：
 │                                     hero_miku / miku_v3 / miku_v3box / miku_v6 /
 │                                     miku_chinese / miku_pocket / logo_word
-├─ preview/                           5 张页面实拍：hero / profile / songs / history / gallery
+├─ preview/                           6 张页面实拍：hero / profile / songs / history / gallery / mobile
 └─ tools/
-   ├─ serve.mjs                       28 行静态服务器：127.0.0.1:8899，禁目录穿越，no-store
+   ├─ serve.mjs                       静态服务器：127.0.0.1:8899，禁目录穿越，no-store
    ├─ dl-img.mjs                      立绘抓取脚本（vocaloid.fandom.com，7 条源 URL）
-   ├─ dl-fonts.mjs                    字体抓取脚本（Google Fonts woff2，5 个字族）
-   └─ verify-live.mjs                 线上探活脚本：抓首页 → 抽出全部本地引用 → 逐个校验状态与字节数
+   └─ dl-fonts.mjs                    字体抓取脚本（Google Fonts woff2，5 个字族）
 ```
 
 ---
 
-## 本地跑起来
-
-**方式 1 · 双击 `index.html`**
-最快，但部分浏览器在 `file://` 下会按同源策略拒绝加载 woff2 字体，排版会掉档。只适合快速瞄一眼。
-
-**方式 2 · 双击 `打开页面.cmd`（推荐，字体 100% 正常）**
-脚本自动在 PATH 或 DSH 运行时目录里找 `node` → 后台起 `tools/serve.mjs` → 打开 `http://127.0.0.1:8899/`。找不到 node 时它会退化成直接打开 `index.html`。
-
-**方式 3 · 手动起服务器**
-
-```bash
-node tools/serve.mjs                 # → http://127.0.0.1:8899/
-MIKU_PORT=9000 node tools/serve.mjs  # 换端口
-python -m http.server 8899           # 没有 node 就用这个，效果一样
-npx serve .                          # 或者任意静态服务器，根目录就是仓库根
-```
-
----
-
-## 部署 / 自建一份
+<a id="deploy"></a>
+## 🚀 部署 / 自建一份
 
 仓库根目录就是站点根目录，`index.html` 在最外层 —— **任何静态托管都能直接吃下去，不需要构建命令、不需要环境变量**。
 
@@ -166,7 +223,8 @@ npx serve .                          # 或者任意静态服务器，根目录�
 
 ---
 
-## 顺手做全的 SEO / 小件
+<a id="seo"></a>
+## 🔎 顺手做全的 SEO / 小件
 
 | 文件 | 作用 |
 | --- | --- |
@@ -177,17 +235,25 @@ npx serve .                          # 或者任意静态服务器，根目录�
 
 ---
 
-## 已知小坑
+<a id="limits"></a>
+## ⚠️ 已知限制与坑
 
-1. **图标还没挂上页面**：`assets/favicon.svg` 已就位，但 `index.html` 第 8 行的 `<link rel="icon">` 目前仍指向 `assets/img/png/logo_word.png`。要启用 SVG 图标，把那行改成 `href="assets/favicon.svg"` 即可（本次只交付图标文件，没有改动页面代码）。
-2. **工具脚本里是写死的绝对路径**：`tools/serve.mjs` 的 `root`、`tools/dl-img.mjs` 的 `out`、`tools/dl-fonts.mjs` 的 `root` 都指向开发机上的 `D:/developing/DSH-plugin/dsh-cosplay/miku`。换机器先改这几行常量，或者干脆用 `python -m http.server`。
-3. **`file://` 下字体可能被拒**：这是浏览器的同源策略，不是页面 bug。本地预览请走 `打开页面.cmd` 或任意静态服务器。
+1. **图标还没挂上页面**：`assets/favicon.svg` 已就位，但 `index.html` 第 8 行的 `<link rel="icon">` 目前仍指向 `assets/img/png/logo_word.png`。要启用 SVG 图标，把那行改成 `href="assets/favicon.svg"` 即可（本仓库只交付了图标文件，没有改动页面代码）。
+2. **`tools/serve.mjs` 与 `打开页面.cmd` 里是写死的绝对路径**：`tools/serve.mjs` 的站点根被写死成
+   `path.resolve('D:/developing/DSH-plugin/dsh-cosplay/miku')`，**不是** `process.cwd()`；
+   `打开页面.cmd` 也只拼了脚本路径、没有设工作目录。所以这两个入口服务的是那个绝对路径，
+   换一台机器就会 404。想稳，用 `python -m http.server 8899`，或者把那几行常量改掉。
+3. **`file://` 下字体可能被拒**：这是浏览器的同源策略，不是页面 bug。本地预览请起一个静态服务器。
 4. **抓取脚本依赖第三方 URL**：`dl-img.mjs` 里的 7 条 fandom 图片直链将来可能失效；立绘已经全部落在 `assets/img/png/`，脚本失效不影响页面运行。
 5. **`assets/fonts/_log.txt`** 是抓取脚本顺手写的日志，已被 `.gitignore` 忽略。
+6. **`preview/hero.png` 偏大（813 KB）**：这是仓库原有的截图，PNG 未压缩。GitHub 渲染时会自己压，
+   但首屏仍然偏重；想瘦身可以重新导出一张（本次没有改动已有图片）。
+7. **只有中文界面**：页面文案与 meta 都是中文（`lang="zh-CN"`），日文只出现在专有名词上。
 
 ---
 
-## 素材与版权
+<a id="credits"></a>
+## 🎨 素材与版权
 
 - **立绘 / 角色**：初音ミク 官方插画，版权归 **Crypton Future Media** 及原画师（KEI、iXima 等）所有；本仓库的 PNG 经 `tools/dl-img.mjs` 取自 [vocaloid.fandom.com](https://vocaloid.fandom.com/wiki/Hatsune_Miku)，仅用于粉丝向非商业展示。请勿商用或二次销售。
 - **字体**：Google Fonts 开源字体，SIL Open Font License 1.1，已本地自托管并保留子集切分，未修改字形。
@@ -198,9 +264,11 @@ npx serve .                          # 或者任意静态服务器，根目录�
 
 ---
 
-## License
+<a id="license"></a>
+## 📜 许可与致谢
 
 页面代码（HTML / CSS / JS / 文案 / `assets/favicon.svg`）以 **MIT** 授权（见 [`LICENSE`](LICENSE)，Copyright © 2026 liceses），随便用、随便改、随便 fork。
+
 立绘与字体**不适用** MIT，各自归属上述权利方 —— `LICENSE` 末尾也写了这条边界，转载前请自行确认授权范围。
 
 <p align="center"><sub>CV01 / 158CM / 42KG / 2007.08.31 / #39C5BB / 39 — 39 = ミク = サンキュー</sub></p>
